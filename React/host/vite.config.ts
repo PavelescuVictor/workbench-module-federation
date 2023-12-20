@@ -17,7 +17,7 @@ export default defineConfig({
 	// Static imports that rely on browser "Top-Level await" feature may not be available for some target environments
 	// Either setup target to "esnext" or use @vite-plugin-top-level-await
 	build: {
-		target: 'esnext',
+		target: 'es2020',
 
 		// Extra
 		modulePreload: false,
@@ -37,8 +37,8 @@ export default defineConfig({
 				// remote_app_2: path.join(REMOTE_APP_2_PATH, 'dist/assets/shared-components-2.js'),
 
 				// Linking remote applications with url path to resources served via a server to localhost:portNumber after app build
-				remote_app_1: 'http://localhost:4010/assets/shared-components-1.js',
-				remote_app_2: 'http://localhost:4011/assets/shared-components-2.js',
+				'first-app': 'http://localhost:4010/assets/first-app.js',
+				'second-app': 'http://localhost:4011/assets/second-app.js',
 			},
 
 			// Shared resources
