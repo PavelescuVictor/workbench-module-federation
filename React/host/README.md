@@ -20,6 +20,7 @@ The *"remotes.d.ts"* file was then added to *"tsconfig.json"* configuration file
 ## Vite setup
 
 **Template used**: *React + Typescript*.
+
 On top of which the [Vite Module Federation Plugin](https://github.com/originjs/vite-plugin-federation) was integrated.
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
