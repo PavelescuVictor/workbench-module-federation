@@ -35,7 +35,7 @@ export default defineConfig({
 			// Required name for module
 			name: 'remote-app',
 
-			// Mofile file name (not required)
+			// Modify file name (not required)
 			filename: 'remote-app.js',
 
 			// Exposed components to the public

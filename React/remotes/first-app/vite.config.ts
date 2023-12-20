@@ -26,7 +26,7 @@ export default defineConfig({
 			// Required name for module
 			name: 'first-app',
 
-			// Mofile file name (not required)
+			// Modify file name (not required)
 			filename: 'first-app.js',
 
 			// Exposed components to the public
