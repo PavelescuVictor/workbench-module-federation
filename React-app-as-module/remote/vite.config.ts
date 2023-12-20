@@ -1,6 +1,5 @@
-import { defineConfig } from 'vite'
-// import path from 'node:path';
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 // Import federation plugin
 import federation from '@originjs/vite-plugin-federation';
@@ -11,7 +10,7 @@ import topLevelAwait from 'vite-plugin-top-level-await';
 export default defineConfig({
 	// Setting up custom port for the application
 	server: {
-		port: 4000,
+		port: 4010,
 	},
 
 	// Static imports that rely on browser "Top-Level await" feature may not be available for some target environments
@@ -32,19 +31,22 @@ export default defineConfig({
 			// The function to generate import names of top-level await promise in each chunk module
 			promiseImportName: i => `__tla${i}`
 		}),
-		react(),
 		federation({
 			// Required name for module
-			name: 'host',
+			name: 'remote-app',
 
-			// Declaring remote modules
-			remotes: {
-				// Linking remote applications with url path to resources served via a server to localhost:portNumber after app build
-				'remote-app': 'http://localhost:4010/assets/remote-app.js',
+			// Mofile file name (not required)
+			filename: 'remote-app.js',
+
+			// Exposed components to the public
+			exposes: {
+				'./App': './src/components/App',
+				'./SharedComponent': './src/components/SharedComponent',
 			},
 
-			// Shared resources
-			shared: ['react', 'react-dom']
+			// Shared resources 
+			shared: ['react', 'react-dom'],
 		}),
+		react()
 	],
 })

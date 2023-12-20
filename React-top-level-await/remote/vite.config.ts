@@ -33,20 +33,14 @@ export default defineConfig({
 		}),
 		federation({
 			// Required name for module
-			name: 'first-app',
+			name: 'remote-app',
 
 			// Mofile file name (not required)
-			filename: 'first-app.js',
+			filename: 'remote-app.js',
 
 			// Exposed components to the public
 			exposes: {
-				'./SharedComponent1': './src/components/SharedComponent1',
-
-				// Diiferent more tailored approach to exposing.
-				'./SharedComponent2': {
-					import: './src/components/SharedComponent2',
-					name: 'SharedComponent2',
-				}
+				'./SharedComponent': './src/components/SharedComponent',
 			},
 
 			// Shared resources 
