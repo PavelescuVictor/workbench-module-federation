@@ -1,10 +1,9 @@
-# Remote Applications
+# React Application with Module Federation
 
-There are a few applications created using [Vite](https://vitejs.dev/).
+The project contains one **Host** applicaiton and one **Remote** application.
+Using *"Module Federation"* to share peices of code between **Host** and **Remote**.
 
-## To run each application you should:
+Both **Host** and **Remote** applications setup was created using [Vite](https://vitejs.dev/).
+Both applications use [vite-top-level-await](https://github.com/Menci/vite-plugin-top-level-await) in order to build for *"es2020"* target and not *"esnext"*.
 
-- **"npm run build-watch"** This way you are consantly watching for changes in the file and build new ones on changes registered.
-- **"npm run serve"** This way you are serving the build files to a local server to be served for hosts
-
-**INFO: Doing these commands in each application directory so each application is locally served on a server and cand be consumed by the host**
+More info is presented in each application *"README.md"* file.
