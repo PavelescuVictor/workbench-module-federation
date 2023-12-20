@@ -1,4 +1,4 @@
-# First Remote Application
+# Remote Application
 
 Application setup was created using [Vite](https://vitejs.dev/).
 
