@@ -1,44 +1,59 @@
 import './App.css'
 
 // Static import of modules from remote applications
-import { SharedComponentExample1 } from 'remote_app_1/Shared-component-example-1';
-import { SharedComponentExample2 } from 'remote_app_1/Shared-component-example-2';
+import { SharedComponent1 } from 'first-app/SharedComponent1';
+import { SharedComponent2 } from 'first-app/SharedComponent2';
 
-import { SharedComponentExample3 } from 'remote_app_2/Shared-component-example-3';
-import { SharedComponentExample4 } from 'remote_app_2/Shared-component-example-4';
+import { SharedComponent3 } from 'second-app/SharedComponent3';
+import { SharedComponent4 } from 'second-app/SharedComponent4';
 
 // Lazy importing same remote applications resources
 // export type ExposeModuleType = React.ComponentType<unknown>;
 // export type LazyImportModuleType = React.LazyExoticComponent<ExposeModuleType>;
 // export type LazyImportModuleArrayType = Array<LazyImportModuleType>;
 
-// const RemoteAppExample1 = 'remote_app_1/Shared-component-example-1';
-// const RemoteAppExample2 = 'remote_app_2/Shared-component-example-2';
+// const SharedComponent1 = 'first-app/SharedComponent1';
+// const SharedComponent2 = 'second-app/SharedComponent2';
+// const SharedComponent3 = 'first-app/SharedComponent3';
+// const SharedComponent4 = 'second-app/SharedComponent4';
+
 // const getAllRemotes = async () => {
 // 	// Resolve all imports befofe proceeding
 // 	const remotes = await Promise.all([
 // 		// List of remote apps modules to import
-// 		React.lazy(() => import(RemoteAppExample1)),
-// 		React.lazy(() => import(RemoteAppExample2)),
+// 		React.lazy(() => import(SharedComponent1)),
+// 		React.lazy(() => import(SharedComponent2)),
+// 		React.lazy(() => import(SharedComponent3)),
+// 		React.lazy(() => import(SharedComponent4)),
 // 	]) as unknown as Promise<LazyImportModuleArrayType>
 
 // 	return remotes;
 // }
 // const rem =  await getAllRemotes();
-// const [LazyImportedSharedComponentExample1, LazyImportedSharedComponentExample2] = rem;
+// const [
+// 	LazyImportedSharedComponent1, 
+// 	LazyImportedSharedComponent2,
+// 	LazyImportedSharedComponent3, 
+// 	LazyImportedSharedComponent4
+// ] = rem;
 
-// const RemoteAppModule = 'remote_app_1';
-// const RemoteApp1 = React.lazy(() => import(RemoteAppModule));
-// const RemoteApp1SharedComponent1 = React.lazy(() => import('remote_app_1/Shared-component-example-2'));
-// const RemoteApp1SharedComponent2 = React.lazy(() => import('remote_app_1/Shared-component-example-2'));
+// const FristAppModule = 'first-app';
+// const FirstApp = React.lazy(() => import(RemoteAppModule));
+// const SharedComponent1 = React.lazy(() => import('first-app/SharedComponent1'));
+// const SharedComponent2 = React.lazy(() => import('first-app/SharedComponent2'));
+
+// const SecondAppModule = 'second-app';
+// const SecondApp = React.lazy(() => import(RemoteAppModule));
+// const SharedComponent3 = React.lazy(() => import('first-app/SharedComponent1'));
+// const SharedComponent4 = React.lazy(() => import('first-app/SharedComponent2'));
 
 const App = () => {
 	return <div className="host-app-1">
-		<h1>Host Application Example 1</h1>
-		<SharedComponentExample1 />
-		<SharedComponentExample2 />
-		<SharedComponentExample3 />
-		<SharedComponentExample4 />
+		<h1>Host Application</h1>
+		<SharedComponent1 />
+		<SharedComponent2 />
+		<SharedComponent3 />
+		<SharedComponent4 />
 	</div>
 }
 
