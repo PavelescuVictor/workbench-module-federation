@@ -2,7 +2,7 @@
 
 An workbench for exploring module federation with different scenarios and examples.
 
-Applications setup was created using [Vite](https://vitejs.dev/).
+Each pplication setup was created using [Vite](https://vitejs.dev/).
 
 **Explored scenarios:**
 - Shared components between one **Remote** application to a **Host** application.
