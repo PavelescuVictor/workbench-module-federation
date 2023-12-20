@@ -13,7 +13,7 @@ The *"remotes.d.ts"* file was then added to *"tsconfig.json"* configuration file
 
 **Alternative way:**
 
--- **"npm run serve"** This way you are running the application on a local server
+- **"npm run serve"** This way you are running the application on a local server
 
 *INFO: One thing to mention is that the host application doesn't neccessarely need to be built. Only remotes.*
 
