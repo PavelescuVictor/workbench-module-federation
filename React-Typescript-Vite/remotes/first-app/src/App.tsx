@@ -1,8 +1,8 @@
 import './App.css'
 
 function App() {
-	return <div>
-		<h1>Remote App Example 1</h1>
+	return <div className="first-app">
+		<h1>First App</h1>
 	</div>
 }
 

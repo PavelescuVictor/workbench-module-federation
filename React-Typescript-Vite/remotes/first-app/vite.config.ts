@@ -7,7 +7,7 @@ import federation from '@originjs/vite-plugin-federation';
 export default defineConfig({
 	// Setting up custom port for the application
 	server: {
-		port: 4011,
+		port: 4010,
 	},
 
 	// Static imports that rely on browser "Top-Level await" feature may not be available for some target environments
@@ -24,19 +24,19 @@ export default defineConfig({
 		// Config settings for the fefderation plugin
 		federation({
 			// Required name for module
-			name: 'remote-app-2',
+			name: 'first-app',
 
 			// Mofile file name (not required)
-			filename: 'remote-app-2.js',
+			filename: 'first-app.js',
 
 			// Exposed components to the public
 			exposes: {
-				'./Shared-component-example-3': './src/components/SharedComponentExample3',
+				'./SharedComponent1': './src/components/SharedComponent1',
 
 				// Diiferent more tailored approach to exposing.
-				'./Shared-component-example-4': {
-					import: './src/components/SharedComponentExample4',
-					name: 'SharedComponentExample4',
+				'./SharedComponent2': {
+					import: './src/components/SharedComponent2',
+					name: 'SharedComponent2',
 				}
 			},
 
