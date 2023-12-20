@@ -1,8 +1,10 @@
 # Host Application
 
-Application setup created using [Vite](https://vitejs.dev/).
+Application setup was created using [Vite](https://vitejs.dev/).
 
-The "remotes.d.ts" file was created to declare the remotes modules from the remote applications. This way Typescript is not complaining about not finding the modules for imports. The "remotes.d.ts" file was then added to "tsconfig.json" configuration file.
+The *"remotes.d.ts"* file was created to declare the remotes modules from the remote applications. This way Typescript is not complaining about not finding the modules for imports. 
+
+The *"remotes.d.ts"* file was then added to *"tsconfig.json"* configuration file.
 
 ## To run this application you should:
 
@@ -12,6 +14,7 @@ The "remotes.d.ts" file was created to declare the remotes modules from the remo
 **Alternative way:**
 
 -- **"npm run serve"** This way you are running the application on a local server
+
 *INFO: One thing to mention is that the host application doesn't neccessarely need to be built. Only remotes.*
 
 ## Vite setup
