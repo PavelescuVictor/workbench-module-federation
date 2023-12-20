@@ -13,7 +13,7 @@ export default defineConfig({
 	// Static imports that rely on browser "Top-Level await" feature may not be available for some target environments
 	// Either setup target to "esnext" or use @vite-plugin-top-level-await
 	build: {
-		target: 'es2020',
+		target: 'esnext',
 
 		// Extra
 		modulePreload: false,

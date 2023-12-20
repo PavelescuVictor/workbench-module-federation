@@ -48,7 +48,7 @@ import { SharedComponent4 } from 'second-app/SharedComponent4';
 // const SharedComponent4 = React.lazy(() => import('first-app/SharedComponent2'));
 
 const App = () => {
-	return <div className="host-app-1">
+	return <div className="host-app">
 		<h1>Host Application</h1>
 		<SharedComponent1 />
 		<SharedComponent2 />
